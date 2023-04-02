@@ -1,0 +1,170 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: orangered;
+  text-align: center;
+  padding: 19px 0;
+}
+.searchInput {
+  max-width: 350px;
+  width: 100%;
+  padding: 8px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.searchBtn {
+  padding: 7px 11px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: orangered;
+  color: black;
+}
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  margin-top: 110px;
+  margin-bottom: 150px;
+}
+.card__item {
+  max-width: 350px;
+  border: 1px solid orangered;
+  padding: 5px;
+}
+.card__img {
+  object-fit: cover;
+}
+.card__title {
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 25px;
+}
+.card__capital {
+  padding-top: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  color: black;
+}
+.card__population {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.loader {
+  width: 150px;
+  height: 150px;
+  margin-top: 170px;
+  border: 5px solid orange;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .loader {
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .searchInput {
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .searchInput {
+    max-width: 270px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .searchInput {
+    max-width: 230px;
+  }
+  .loader {
+    margin-top: 70px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .btn {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 354px) {
+  .searchInput {
+    max-width: 210px;
+  }
+}
+@media only screen and (max-width: 334px) {
+  .btn {
+    padding: 9px 10px;
+    margin-left: 9px;
+  }
+  .searchInput {
+    max-width: 200px;
+  }
+}
