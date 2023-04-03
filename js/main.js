@@ -8,8 +8,7 @@ const searchInput = document.querySelector(".searchInput");
 async function fetchData() {
   if (!searchInput.value) {
     url = "https://restcountries.com/v3.1/all";
-  }
-   else {
+  } else {
     const value = searchInput.value.toLowerCase();
     url = `https://restcountries.com/v3.1/name/${value}`;
   }
@@ -86,4 +85,5 @@ const searchBtn = document.querySelector(".searchBtn");
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
   fetchData();
+  searchInput.value = "";
 });
