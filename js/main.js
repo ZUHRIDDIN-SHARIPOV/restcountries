@@ -32,7 +32,11 @@ async function fetchData() {
       const cardCapital = document.createElement("h2");
       cardItem.append(cardCapital);
       cardCapital.classList.add("card__capital");
-      cardCapital.innerHTML = `Capital: ${elements.capital}`;
+      if (elements.capital !== undefined && elements.capital !== null) {
+        cardCapital.innerHTML = `Capital: ${elements.capital}`;
+      } else {
+        cardCapital.textContent = `Capital: Not available!`;
+      }
       const population = document.createElement("p");
       cardItem.append(population);
       population.classList.add("card__population");
@@ -73,14 +77,20 @@ async function fetchData() {
           1
         )} mlrd`;
       }
+      if (elements.currencies !== undefined) {
+        const cardCurrencies = document.createElement("p");
+        cardItem.append(cardCurrencies);
+        cardCurrencies.classList.add("card__currencies");
+        const currencyKeys = Object.keys(elements.currencies);
+        const currencyValues = Object.values(elements.currencies);
+        cardCurrencies.textContent = `Currency: ${currencyKeys} , ${currencyValues[0].symbol}`;
+      }
     });
   } catch (error) {
     console.error(error.message);
   }
 }
-setTimeout(() => {
-  fetchData();
-}, 777);
+fetchData();
 const searchBtn = document.querySelector(".searchBtn");
 searchBtn.addEventListener("click", (e) => {
   e.preventDefault();

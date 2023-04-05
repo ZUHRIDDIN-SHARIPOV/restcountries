@@ -46,7 +46,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: orangered;
+  background-color: orange;
   text-align: center;
   padding: 19px 0;
 }
@@ -64,21 +64,21 @@ header {
   border: none;
   border-radius: 5px;
   border: 1px solid black;
-  background-color: orangered;
+  background-color: orange;
   color: black;
 }
 .card__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 25px;
-  margin-top: 110px;
+  gap: 55px;
+  margin-top: 130px;
   margin-bottom: 150px;
 }
 .card__item {
   max-width: 350px;
-  border: 1px solid orangered;
   padding: 5px;
+  border: 1px solid gainsboro;
 }
 .card__img {
   object-fit: cover;
@@ -96,6 +96,10 @@ header {
 }
 .card__population {
   padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.card__currencies {
   padding-bottom: 10px;
   font-size: 16px;
 }
@@ -122,6 +126,11 @@ header {
 @media only screen and (max-width: 540px) {
   .loader {
     margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .card__list{
+    margin-top: 110px;
   }
 }
 @media only screen and (max-width: 480px) {
