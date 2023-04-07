@@ -82,6 +82,7 @@ header {
 }
 .card__img {
   object-fit: cover;
+  height: 220px;
 }
 .card__title {
   padding-top: 10px;
